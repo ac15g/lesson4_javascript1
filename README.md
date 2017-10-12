@@ -4,20 +4,19 @@
 Web Application Development
 
 ### Assignment Date:  
-(Month Day, Year)
+(October 13th, 2017)
 
 ### Student Name:  
-(First and Last Name)
+(Alita Clark)
 
 ### Project Description:
-(In your own words, briefly describe the assignment.)
+(Create a functioning expense calculator and make sure the form can also clear.)
 
 ### View Project:
-(Replace this statement with your GitHub Page URL that was created when you 
- published the project.)
+(https://ac15g.github.io/lesson4_javascript1/)
 
 ### Lessons Learned in the Assignment:
-1. (Briefly describe a lesson/concept learned in this lesson.)
-2. (Briefly describe a lesson/concept learned in this lesson.)
-3. (Briefly describe a lesson/concept learned in this lesson.)
+1. (getElementById() will locate the variable with that id and use it.)
+2. (Order matters. If a calculation is performed, the order of operations must be accurate and any prior calculations must be performed before that section of code.)
+3. (Variable names should make sense and be easily identifiable anywhere in the code.)
 

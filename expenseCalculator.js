@@ -1,8 +1,8 @@
         /************************************************************************************************ 
           Course:  Web Application Development
           Assignment:  Lesson 4 (JavaScript 1)
-          Author:  
-          Date:   
+          Author: Alita Clark
+          Date: 10/12/17
           Filename: expenseCalculator.js
         *************************************************************************************************/
      
@@ -34,8 +34,11 @@
                    * HINT:  Use the following variable names:  householdAmt, miscellaneousAmt, transportationAmt
                   **************************************************************************************************/
 
-                  var shelterAmt = document.getElementById("shelterInput").value;
-                  var foodAmt = document.getElementById("foodInput").value;
+                  var shelterAmt = document.getElementById("shelterInput").value; //get shelter value, assign amount
+                  var foodAmt = document.getElementById("foodInput").value; //get food value, assign amount
+                  var householdAmt = document.getElementById("householdInput").value; //get household value, assign amount
+                  var transportationAmt = document.getElementById("transportationInput").value; //get transportation value, assign amount
+                  var miscellaneousAmt = document.getElementById("miscellaneousInput").value; //get miscellaneous value, assign amount
 
 
 
@@ -56,8 +59,11 @@
                    *          The parseFloat() method is used to convert a String to a Float.
                   **************************************************************************************************/  
 
-                  shelterAmt = parseFloat(shelterAmt);
-                  foodAmt = parseFloat(foodAmt);
+                  shelterAmt = parseFloat(shelterAmt); //convert shelter String to Float
+                  foodAmt = parseFloat(foodAmt); //convert food String to Float
+                  householdAmt = parseFloat(householdAmt); //convert household String to Float
+                  transportationAmt = parseFloat(transportationAmt); //convert transportation String to Float
+                  miscellaneousAmt = parseFloat(miscellaneousAmt); //convert miscellaneous String to Float
 
 
 
@@ -79,6 +85,9 @@
                   var totalExpenses; //total expenses for the user
                   var shelterPct; //shelter category percentage
                   var foodPct;  //food category percentage
+                  var householdPct; //household category percentage
+                  var transportationPct; //transportation category percentage
+                  var miscellaneousPct; //miscellaneous category percentage
 
 
 
@@ -106,9 +115,14 @@
                    *          variables declared in Task 4.  
                   *******************************************************************************************************/   
 
-
-                  shelterPct = 100 * (shelterAmt / totalExpenses);
-                  foodPct = 100 * (foodAmt / totalExpenses);
+                totalExpenses = shelterAmt + foodAmt + householdAmt + transportationAmt + miscellaneousAmt; //calculation of total
+                //expenses for percentages
+                
+                  shelterPct = 100 * (shelterAmt / totalExpenses); //percentage for shelter
+                  foodPct = 100 * (foodAmt / totalExpenses); //percentage for food
+                  householdPct = 100 * (householdAmt / totalExpenses); //percentage for household
+                  transportationPct = 100 * (transportationAmt / totalExpenses); //percentage for transportation
+                  miscellaneousPct = 100 * (miscellaneousAmt / totalExpenses); //percentage for miscellaneous
 
 
                   /******************************************************************************************************
@@ -132,9 +146,23 @@
                    *          content (inner HTML) of an element.
                   *******************************************************************************************************/  
 
+                  //display totalExpenses
                   document.getElementById("totalExpenses").innerHTML = "<b>Total Expenses:     $</b> " + totalExpenses.toFixed(2);
+                  
+                  //display shelterPercentage
                   document.getElementById("shelterPercentage").innerHTML = "% for <b>shelter</b>:      " + shelterPct.toFixed(1);      
+                  
+                  //display foodPercentage
                   document.getElementById("foodPercentage").innerHTML = "% for <b>food:</b>      " + foodPct.toFixed(1);
+                  
+                  //display householdPercentage
+                  document.getElementById("householdPercentage").innerHTML = "% for <b>household:</b>    " + householdPct.toFixed(1);
+                  
+                  //display transportationPercentage
+                  document.getElementById("transportationPercentage").innerHTML = "% for <b>transportation:</b>   " + transportationPct.toFixed(1);
+                  
+                  //display miscellaneousPercentage
+                  document.getElementById("miscellaneousPercentage").innerHTML = "% for <b>miscellaneous:</b>    " + miscellaneousPct.toFixed(1);
 
 
          } //end of calculatePercentages function
@@ -168,9 +196,12 @@
 
                   *************************************************************************************************************/                
 
-                  document.getElementById("totalExpenses").innerHTML = ""; 
-                  document.getElementById("shelterPercentage").innerHTML = "";      
-                  document.getElementById("foodPercentage").innerHTML  = "";
+                  document.getElementById("totalExpenses").innerHTML = ""; //clear totalExpenses
+                  document.getElementById("shelterPercentage").innerHTML = ""; //clear shelterPercentage
+                  document.getElementById("foodPercentage").innerHTML  = ""; //clear foodPercentage
+                  document.getElementById("householdPercentage").innerHTML = ""; //clear householdPercentage
+                  document.getElementById("transportationPercentage").innerHTML = ""; //clear transportationPercentage
+                  document.getElementById("miscellaneousPercentage").innerHTML = ""; //clear miscellaneousPercentage
 
 
               
